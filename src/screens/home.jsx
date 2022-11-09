@@ -8,10 +8,10 @@ export const home = () => (
     <View style={styles.div}>
       <Grid style={styles.grid} container spacing={-1}>
         <Grid xs={6}>
-        <TextField style={styles.input} id="outlined-basic" label="Nome" variant="outlined" />
+        <TextField style={styles.input} id="standard-basic" label="Nome" variant="filled" />
         </Grid>
         <Grid>
-        <TextField style={styles.input} id="outlined-basic" label="Sobrenome" variant="outlined" />
+        <TextField style={styles.input} id="outlined-basic" label="Sobrenome" variant="filled" />
         </Grid>
       </Grid>
     </View>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   input: {
     display: "flex",
-    height: 20,
+    padding: 0,
     width: 150,
 
   },
