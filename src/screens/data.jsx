@@ -1,39 +1,20 @@
-import * as React from "react";
-import { Grid, TextField } from "@mui/material";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native-paper";
+import DatePicker from "react-native-date-picker";
 
-export function cadastro() {
-  const navigation = useNavigation();
+export function data() {
+  const [date, setDate] = useState(new Date())
 
-  function open() {
-    navigation.navigate("Data");
-  }
+
   return (
     <View>
-      <Text style={styles.tittle}>Digite seu nome:</Text>
-      <Text style={styles.text}>o nome aparecerá no seu perfil</Text>
+      <Text style={styles.tittle}>Quando é seu aniversário:</Text>
+      <Text style={styles.text}>a data aparecerá no seu perfil</Text>
       <View style={styles.div}>
-        <Grid style={styles.grid} container spacing={-1}>
-          <Grid xs={6}>
-            <TextField
-              style={styles.input}
-              id="standard-basic"
-              label="Nome"
-              variant="filled"
-            />
-          </Grid>
-          <Grid>
-            <TextField
-              style={styles.input}
-              id="outlined-basic"
-              label="Sobrenome"
-              variant="filled"
-            />
-          </Grid>
-        </Grid>
+      <DatePicker date={date} onDateChange={setDate} />
       </View>
       <View style={styles.div}>
         <Button style={styles.botao} mode="contained" onPress={open}>
@@ -42,7 +23,7 @@ export function cadastro() {
       </View>
     </View>
   );
-};
+  }
 
 const styles = StyleSheet.create({
   tittle: {
@@ -69,11 +50,7 @@ const styles = StyleSheet.create({
     maxWidth: "768px",
     margin: "auto",
   },
-  grid: {
-    alignItems: "center",
-    margin: 50,
-    justifyContent: "center",
-  },
+ 
   botao: {
     width: "20rem",
   },
