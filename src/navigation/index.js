@@ -3,6 +3,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { cadastro } from "../screens/cadastro";
 import { data } from "../screens/data";
+import { genero } from "../screens/genero";
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -19,6 +20,13 @@ export const RootNavigation = () => {
       <Stack.Screen
         name="Data"
         component={data}
+        options={{
+          headerShown: false,
+        }}
+      />
+        <Stack.Screen
+        name="Genero"
+        component={genero}
         options={{
           headerShown: false,
         }}

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native-paper";
+import { styles } from "../lib/styles";
 
 export function cadastro() {
   const navigation = useNavigation();
@@ -43,38 +44,3 @@ export function cadastro() {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  tittle: {
-    textAlign: "center",
-    margin: 24,
-    fontSize: "20px",
-    marginTop: '20rem',
-    fontWeight: "bold",
-  
-  },
-  text: {
-    textAlign: "center",
-    opacity: "50%",
-  },
-  input: {
-    display: "flex",
-    padding: 0,
-    width: 150,
-  },
-  div: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    maxWidth: "768px",
-    margin: "auto",
-  },
-  grid: {
-    alignItems: "center",
-    margin: 50,
-    justifyContent: "center",
-  },
-  botao: {
-    width: "20rem",
-  },
-});
