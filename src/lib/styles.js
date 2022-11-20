@@ -4,41 +4,49 @@ export const styles = StyleSheet.create({
   tittle: {
     textAlign: "center",
     margin: 24,
-    fontSize: "20px",
-    marginTop: "20rem",
+    fontSize: 20,
+    marginTop: 220,
     fontWeight: "bold",
   },
   text: {
     textAlign: "center",
-    opacity: "50%",
+    opacity: 50,
   },
   input: {
     display: "flex",
     padding: 0,
     width: 150,
+    marginTop: 10,
   },
   div: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    maxWidth: "768px",
-    margin: "auto",
+    margin: 20,
   },
 
   botao: {
-    width: "20rem",
+    width: 200,
+    height: 40,
+    borderRadius: 40,
   },
   text: {
     textAlign: "center",
-    opacity: "50%",
+    opacity: 50,
   },
-  grid: {
-    alignItems: "center",
-    margin: 50,
-    justifyContent: "center",
-  },
+
   row: {
     alignItems: "center",
     justifyContent: "center",
   },
+  left: {
+    display: 'flex',
+    flexDirection: 'row',
+    margin: 60,
+  },
+  input1: {
+
+  },
+  input2: {
+  }
 });
