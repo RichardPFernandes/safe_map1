@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { cadastro } from "../screens/cadastro";
 import { data } from "../screens/data";
 import { genero } from "../screens/genero";
+import { numero } from "../screens/numero";
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -24,12 +25,21 @@ export const RootNavigation = () => {
           headerShown: false,
         }}
       />
-        <Stack.Screen
+      <Stack.Screen
         name="Genero"
         component={genero}
         options={{
           headerShown: false,
         }}
+
+      />
+      <Stack.Screen
+        name="Numero"
+        component={numero}
+        options={{
+          headerShown: false,
+        }}
+
       />
     </Stack.Navigator>
   );

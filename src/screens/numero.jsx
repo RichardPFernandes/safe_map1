@@ -4,36 +4,27 @@ import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
 
-export function cadastro() {
+export function numero() {
   const navigation = useNavigation();
   const [text, setText] = React.useState("");
-  const [text1, setText1] = React.useState("");
 
   function open() {
-    navigation.navigate("Data");
+    navigation.navigate("Cadastro");
   }
   return (
     <View>
-      <Text style={styles.tittle}>Digite seu nome:</Text>
-      <Text style={styles.text}>o nome aparecerá no seu perfil</Text>
+      <Text style={styles.tittle}>Insira o seu numero de celular:</Text>
+      <Text style={styles.text}>você precisará confirmar o código que enviaremos ao seu celular</Text>
       <View style={{  alignItems: 'center', justifyContent: "center"}}>
         <View style={styles.left}>
-          <View style={{justifyContent: 'space-between', marginRight: 20,}}>
+          <View>
           <TextInput
-            style={styles.input}
-            label="Nome"
+            style={styles.number}
+            keyboardType="numeric"
+            label="Número"
             mode='flat'
             value={text}
             onChangeText={text => setText(text)}
-          />
-          </View>
-          <View style={{justifyContent: 'space-between',}}>
-          <TextInput
-            style={styles.input}
-            label="Sobrenome"
-            mode='flat'
-            value={text1}
-            onChangeText={text1 => setText1(text1)}
           />
            </View>
         </View>

@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    opacity: 50,
+    opacity: 0.2,
   },
   input: {
     display: "flex",
@@ -44,9 +44,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     margin: 60,
   },
-  input1: {
-
-  },
-  input2: {
+  number:{
+    width: 350,
   }
 });
