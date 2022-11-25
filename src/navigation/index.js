@@ -3,6 +3,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Cadastro } from "../screens/Cadastro";
 import { Data } from "../screens/Data";
+import { Email } from "../screens/Email";
 import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
 import { Numero } from "../screens/numero";
@@ -46,6 +47,14 @@ export const RootNavigation = () => {
       <Stack.Screen
         name="Numero"
         component={Numero}
+        options={{
+          headerShown: false,
+        }}
+
+      />
+      <Stack.Screen
+        name="Email"
+        component={Email}
         options={{
           headerShown: false,
         }}

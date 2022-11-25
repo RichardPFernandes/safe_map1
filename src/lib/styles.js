@@ -5,9 +5,15 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     margin: 24,
     fontSize: 20,
-    marginTop: 220,
+    marginTop: 200,
     fontWeight: "bold",
-    
+  },
+  tittle1: {
+    textAlign: "center",
+    margin: 24,
+    fontSize: 18,
+    marginTop: 30,
+    fontWeight: "bold",
   },
   text: {
     textAlign: "center",
@@ -23,11 +29,13 @@ export const styles = StyleSheet.create({
     display: "flex",
     padding: 0,
     width: 300,
-    marginTop: 90,
+    marginTop: 20,
+  },
+  container:{
+    marginTop: 200,
   },
   div: {
-    flex: 1,
-    marginTop: 220,
+    marginTop: 10,
     alignItems: "center",
     justifyContent: "center",
     margin: 20,
@@ -36,10 +44,10 @@ export const styles = StyleSheet.create({
   div1: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 100,
+    marginTop: 50,
   },
   botao: {
-    width: 200,
+    width: 300,
     height: 40,
     borderRadius: 40,
   },
@@ -47,7 +55,7 @@ export const styles = StyleSheet.create({
     width: 200,
     height: 40,
     borderRadius: 40,
-    marginTop: 100,
+    marginTop: 20,
   },
   text: {
     textAlign: "center",
@@ -61,21 +69,10 @@ export const styles = StyleSheet.create({
   left: {
     display: 'flex',
     flexDirection: 'row',
-    margin: 60,
+    margin: 30,
   },
   number:{
     width: 350,
   },
-  hairline: {
-    backgroundColor: '#A2A2A2',
-    height: 2,
-    width: 305,
-  },
-  
-  loginButtonBelowText1: {
-    fontSize: 14,
-    paddingHorizontal: 5,
-    alignSelf: 'center',
-    color: '#A2A2A2'
-  },
+
 });

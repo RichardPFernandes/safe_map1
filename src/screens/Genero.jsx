@@ -8,7 +8,7 @@ export function Genero() {
   const navigation = useNavigation();
 
   function open() {
-    navigation.navigate("Numero");
+    navigation.navigate("Email");
   }
   const [checked, setChecked] = React.useState("first");
 

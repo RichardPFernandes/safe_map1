@@ -6,6 +6,7 @@ export declare global {
       Data: undefined;
       Genero: undefined;
       Numero: undefined;
+      Email: undefined;
       
     }
   }

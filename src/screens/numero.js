@@ -48,7 +48,7 @@ export function Numero() {
 
 
   function open() {
-    navigation.navigate("Cadastro");
+    navigation.navigate("Email");
   }
   return (
     <View>
@@ -78,9 +78,10 @@ export function Numero() {
           Enviar
         </Button>
         <View style={styles.div1}>
+        <Text style={styles.tittle1}>Insira o código que voce recebeu:</Text>
           <TextInput
             style={styles.number}
-            keyboardType="number-pad"
+            keyboardType= "numeric"
             autoCompleteType="tel"
             label="Número"
             mode='flat'
