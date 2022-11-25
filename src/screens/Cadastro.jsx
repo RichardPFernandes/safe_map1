@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
 
-export function cadastro() {
+export function Cadastro() {
   const navigation = useNavigation();
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");

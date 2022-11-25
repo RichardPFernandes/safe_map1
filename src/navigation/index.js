@@ -1,33 +1,43 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 // // import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { cadastro } from "../screens/cadastro";
-import { data } from "../screens/data";
-import { genero } from "../screens/genero";
-import { numero } from "../screens/numero";
+import { Cadastro } from "../screens/Cadastro";
+import { Data } from "../screens/Data";
+import { Genero } from "../screens/Genero";
+import { Home } from "../screens/Home";
+import { Numero } from "../screens/numero";
+import setup from '../services/setup'
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 export const RootNavigation = () => {
   return (
     <Stack.Navigator>
+         <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerShown: false,
+        }}
+
+      />
       <Stack.Screen
         name="Cadastro"
-        component={cadastro}
+        component={Cadastro}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
         name="Data"
-        component={data}
+        component={Data}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
         name="Genero"
-        component={genero}
+        component={Genero}
         options={{
           headerShown: false,
         }}
@@ -35,12 +45,13 @@ export const RootNavigation = () => {
       />
       <Stack.Screen
         name="Numero"
-        component={numero}
+        component={Numero}
         options={{
           headerShown: false,
         }}
 
       />
+      
     </Stack.Navigator>
   );
 };

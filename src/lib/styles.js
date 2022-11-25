@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 220,
     fontWeight: "bold",
+    
   },
   text: {
     textAlign: "center",
@@ -18,17 +19,35 @@ export const styles = StyleSheet.create({
     width: 150,
     marginTop: 10,
   },
+  input1: {
+    display: "flex",
+    padding: 0,
+    width: 300,
+    marginTop: 90,
+  },
   div: {
     flex: 1,
+    marginTop: 220,
     alignItems: "center",
     justifyContent: "center",
     margin: 20,
+    
   },
-
+  div1: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 100,
+  },
   botao: {
     width: 200,
     height: 40,
     borderRadius: 40,
+  },
+  botao1: {
+    width: 200,
+    height: 40,
+    borderRadius: 40,
+    marginTop: 100,
   },
   text: {
     textAlign: "center",
@@ -46,5 +65,17 @@ export const styles = StyleSheet.create({
   },
   number:{
     width: 350,
-  }
+  },
+  hairline: {
+    backgroundColor: '#A2A2A2',
+    height: 2,
+    width: 305,
+  },
+  
+  loginButtonBelowText1: {
+    fontSize: 14,
+    paddingHorizontal: 5,
+    alignSelf: 'center',
+    color: '#A2A2A2'
+  },
 });

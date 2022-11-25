@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 import { Button, RadioButton } from "react-native-paper";
 import { styles } from "../lib/styles";
 
-export function genero() {
+export function Genero() {
   const navigation = useNavigation();
 
   function open() {

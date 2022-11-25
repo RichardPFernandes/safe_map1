@@ -6,7 +6,7 @@ import { Button } from "react-native-paper";
 import { styles } from "../lib/styles";
 
 
-export function data() {
+export function Data() {
   const [date, setDate] = useState(new Date())
 
   
