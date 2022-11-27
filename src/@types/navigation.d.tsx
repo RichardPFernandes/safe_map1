@@ -7,7 +7,10 @@ export declare global {
       Genero: undefined;
       Numero: undefined;
       Email: undefined;
-      
+      Senha: undefined;
+      Cep: undefined;
+      Cpf: undefined;
+      FinalCadastro: undefined;
     }
   }
 }

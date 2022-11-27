@@ -3,13 +3,37 @@ import { Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
+import { Alert } from "react-native-web";
 
 
 
 export function Email() {
     const navigation = useNavigation();
-    const [text, setText] = React.useState("");
-    const [text1, setText1] = React.useState("");
+    const [email, setEmail] = useState("")
+    const [checkValidEmail, setCheckValidEmail] = useState(false)
+    const handleCheckEmail = (text) => {
+      let re = /\S+@\S+\.\S+/;
+      let regex  = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6} $/im;
+    
+ 
+
+
+      setEmail(text);
+      if(re.test(text) || regex.test(text)){
+        setCheckValidEmail(false);
+      }
+      else{
+        setCheckValidEmail(true);
+      }
+    }
+    function handleClick () {
+      if (email.trim().length > 5) {
+         open()
+      } else {
+          alert('Email Invalido');
+      }
+  }
+
   function open() {
     navigation.navigate("Senha");
   }
@@ -22,18 +46,17 @@ export function Email() {
           <View>
             <TextInput
               style={styles.number}
-              keyboardType="phone-pad"
-              autoCompleteType="tel"
+              keyboardType="email-address"
               label="Email"
               mode='flat'
-              value={text}
-              onChangeText={text => setText1(text)}
+              value={email}
+              onChangeText={(text)=>handleCheckEmail(text)}
             />
           </View>
         </View>
       </View>
       <View style={styles.div}>
-        <Button style={styles.botao} mode="contained" onPress={sendVerification}>
+        <Button style={styles.botao} mode="contained" onPress={()=> {checkValidEmail ? (alert('Email invalido')) : handleClick() }} >
           Enviar
         </Button>
       </View>

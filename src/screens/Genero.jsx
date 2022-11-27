@@ -17,21 +17,20 @@ export function Genero() {
       <Text style={styles.tittle}>Qual é o seu gênero?</Text>
       <Text style={styles.text}>o seu gênero aparecerá no seu perfil</Text>
       <View style={styles.row}>
-        <View style={{ flexDirection: "row", alignItems: "center", margin: 40, }}>
-
-          <Text style={styles.text}>Feminino</Text>
-          <RadioButton
-            value="first"
-            status={checked === "first" ? "checked" : "unchecked"}
-            onPress={() => setChecked("first")}
-          />
-
-          <Text style={styles.text}>Outros</Text>
-          <RadioButton
-            value="second"
-            status={checked === "second" ? "checked" : "unchecked"}
-            onPress={() => setChecked("second")}
-          />
+        <View style={{ flexDirection: "row", alignItems: "center", margin: 40,}}>
+            <Text style={styles.text}>Feminino</Text>
+            <RadioButton
+            style={{ width: 100}}
+              value="first"
+              status={checked === "first" ? "checked" : "unchecked"}
+              onPress={() => setChecked("first")}
+            />
+              <Text style={styles.text}>Outros</Text>
+              <RadioButton
+                value="second"
+                status={checked === "second" ? "checked" : "unchecked"}
+                onPress={() => setChecked("second")}
+              />
         </View>
       </View>
 

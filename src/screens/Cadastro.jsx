@@ -9,6 +9,17 @@ export function Cadastro() {
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");
 
+    
+  const handleClick = event => {
+    event.preventDefault();
+
+    if (text.trim().length >= 3 && text1.trim().length >= 3) {
+       open()
+    } else {
+        alert('é necessario que o nome e sobrenome tenha ao menos 4 caracteres');
+    }
+}
+
   function open() {
     navigation.navigate("Data");
   }
@@ -39,7 +50,7 @@ export function Cadastro() {
         </View>
       </View>
       <View style={styles.div}>
-        <Button style={styles.botao} mode="contained" onPress={open}>
+        <Button style={styles.botao} mode="contained" onPress={handleClick}>
           Enviar
         </Button>
       </View>

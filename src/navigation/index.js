@@ -2,11 +2,15 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 // // import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Cadastro } from "../screens/Cadastro";
+import { Cep } from "../screens/Cep";
+import { Cpf } from "../screens/Cpf";
 import { Data } from "../screens/Data";
 import { Email } from "../screens/Email";
+import { FinalCadastro } from "../screens/FinalCadastro";
 import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
 import { Numero } from "../screens/numero";
+import { Senha } from "../screens/Senha";
 import setup from '../services/setup'
 
 const Stack = createNativeStackNavigator();
@@ -14,7 +18,7 @@ const Tab = createMaterialBottomTabNavigator();
 export const RootNavigation = () => {
   return (
     <Stack.Navigator>
-         <Stack.Screen
+      <Stack.Screen
         name="Home"
         component={Home}
         options={{
@@ -25,42 +29,41 @@ export const RootNavigation = () => {
       <Stack.Screen
         name="Cadastro"
         component={Cadastro}
-        options={{
-          headerShown: false,
-        }}
       />
       <Stack.Screen
         name="Data"
         component={Data}
-        options={{
-          headerShown: false,
-        }}
       />
       <Stack.Screen
         name="Genero"
         component={Genero}
-        options={{
-          headerShown: false,
-        }}
-
       />
       <Stack.Screen
         name="Numero"
         component={Numero}
-        options={{
-          headerShown: false,
-        }}
-
       />
       <Stack.Screen
         name="Email"
         component={Email}
-        options={{
-          headerShown: false,
-        }}
-
       />
-      
+      <Stack.Screen
+        name="Senha"
+        component={Senha}
+      />
+      <Stack.Screen
+        name="Cep"
+        component={Cep}
+      />
+      <Stack.Screen
+        name="Cpf"
+        component={Cpf}
+      />
+         <Stack.Screen
+        name="Concluir Cadastro"
+        component={FinalCadastro}
+      />
+
+
     </Stack.Navigator>
   );
 };

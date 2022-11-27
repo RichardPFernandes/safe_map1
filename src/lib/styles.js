@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
     width: 300,
     marginTop: 20,
   },
-  container:{
+  container1:{
     marginTop: 200,
   },
   div: {
@@ -73,6 +73,27 @@ export const styles = StyleSheet.create({
   },
   number:{
     width: 350,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 64,
+    paddingHorizontal: 24
+  },
+  titlePage: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    width: '100%',
+    textAlign: 'left',
+    marginBottom: 24
+  },
+  form: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
 });

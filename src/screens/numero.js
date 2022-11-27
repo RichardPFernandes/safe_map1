@@ -38,9 +38,7 @@ export function Numero() {
       .catch((error) => {
         alert(error);
       })
-    Alert.alert(
-      'login sucesso'
-    )
+    open()
   }
 
 
@@ -48,15 +46,15 @@ export function Numero() {
 
 
   function open() {
-    navigation.navigate("Email");
+    navigation.navigate("Cpf");
   }
   return (
-    <View>
+    <View style={styles.div1}>
       <FirebaseRecaptchaVerifierModal
         ref={recaptchaVerifier}
         firebaseConfig={firebaseConfig}
       />
-      <Text style={styles.tittle}>Insira o seu numero de celular:</Text>
+      <Text style={styles.tittle1}>Insira o seu numero de celular:</Text>
       <Text style={styles.text}>você precisará confirmar o código que enviaremos ao seu celular</Text>
       <View style={{ alignItems: 'center', justifyContent: "center" }}>
         <View style={styles.left}>
@@ -88,7 +86,7 @@ export function Numero() {
             value={code}
             onChangeText={setCode}
           />
-          <Button style={styles.botao1} mode="contained" onPress={confirmCode}>
+          <Button style={{...styles.botao, marginTop: 30}} mode="contained" onPress={confirmCode}>
             Enviar
           </Button>
         </View>

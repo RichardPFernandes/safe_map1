@@ -8,9 +8,10 @@ export function Home() {
   const navigation = useNavigation();
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");
+  const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
 
   function openLogin() {
-    navigation.navigate("Cadastro");
+    navigation.navigate("Senha");
   }
 
   function openCadastro() {
@@ -18,7 +19,7 @@ export function Home() {
   }
   return (
     <View>
-      <View style={styles.container}>
+      <View style={styles.container1}>
         <View style={styles.div}>
           <TextInput
             style={styles.input1}
@@ -32,8 +33,8 @@ export function Home() {
         <View style={styles.div}>
           <TextInput
             style={styles.input1}
-            secureTextEntry={true}
-            right={<TextInput.Icon icon="eye"/>}
+            secureTextEntry={isPasswordSecure}
+            right={<TextInput.Icon icon="eye" onPress={()=>{ isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true)}}/>}
             label="Senha"
             mode='flat'
             value={text1}
