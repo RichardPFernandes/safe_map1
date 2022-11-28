@@ -3,8 +3,7 @@ import { Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
-import { Alert } from "react-native-web";
-
+import { auth } from "../services/firebaseConfig";
 
 
 export function Email() {
@@ -14,9 +13,8 @@ export function Email() {
     const handleCheckEmail = (text) => {
       let re = /\S+@\S+\.\S+/;
       let regex  = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6} $/im;
-    
  
-
+      
 
       setEmail(text);
       if(re.test(text) || regex.test(text)){
@@ -35,7 +33,9 @@ export function Email() {
   }
 
   function open() {
-    navigation.navigate("Senha");
+    navigation.navigate("Senha",{
+      email: email,
+    });
   }
   return (
     <View>

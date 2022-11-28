@@ -3,19 +3,26 @@ import { Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
+import firebase from "firebase/compat/app";
+import { firebaseConfig } from "../services/firebaseConfig";
+
 
 export function Home() {
+  firebase.initializeApp(firebaseConfig)
   const navigation = useNavigation();
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");
   const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
+  
 
   function openLogin() {
-    navigation.navigate("Senha");
+    firebase.auth()
+      .signInWithEmailAndPassword(text, text1)
+      .then(() => navigation.navigate("Pagina Inicial"))
+      .catch(error => console.log(error));
   }
-
   function openCadastro() {
-    navigation.navigate("Cadastro");
+    navigation.navigate("Pagina Inicial");
   }
   return (
     <View>

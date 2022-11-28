@@ -10,6 +10,7 @@ import { FinalCadastro } from "../screens/FinalCadastro";
 import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
 import { Numero } from "../screens/numero";
+import { PaginaInicial } from "../screens/PaginaInicial";
 import { Senha } from "../screens/Senha";
 import setup from '../services/firebaseConfig'
 
@@ -61,6 +62,10 @@ export const RootNavigation = () => {
          <Stack.Screen
         name="Concluir Cadastro"
         component={FinalCadastro}
+      />
+          <Stack.Screen
+        name="Pagina Inicial"
+        component={PaginaInicial}
       />
 
 
