@@ -11,7 +11,7 @@ import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
 import { Numero } from "../screens/numero";
 import { Senha } from "../screens/Senha";
-import setup from '../services/setup'
+import setup from '../services/firebaseConfig'
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();

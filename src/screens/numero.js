@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { FirebaseRecaptchaVerifier, FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha'
-import { firebaseConfig } from "../services/setup";
+import { firebaseConfig } from "../services/firebaseConfig";
 import firebase from "firebase/compat/app";
 import { Alert, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";

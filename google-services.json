@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "744724782862",
+    "firebase_url": "https://safe-map15-default-rtdb.firebaseio.com",
+    "project_id": "safe-map15",
+    "storage_bucket": "safe-map15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744724782862:android:acdeb5be99891c1f31815f",
+        "android_client_info": {
+          "package_name": "safe.map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744724782862-8egmgd48j8p8kaut2ghgantq93t5la48.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTa2mtI4SCHEDoom1OnuM9LQP6v5zQeV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744724782862-8egmgd48j8p8kaut2ghgantq93t5la48.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
