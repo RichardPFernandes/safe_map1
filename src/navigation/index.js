@@ -9,6 +9,7 @@ import { Email } from "../screens/Email";
 import { FinalCadastro } from "../screens/FinalCadastro";
 import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
+import { Mapa } from "../screens/Mapa";
 import { Numero } from "../screens/numero";
 import { PaginaInicial } from "../screens/PaginaInicial";
 import { Senha } from "../screens/Senha";
@@ -66,6 +67,10 @@ export const RootNavigation = () => {
           <Stack.Screen
         name="Pagina Inicial"
         component={PaginaInicial}
+      />
+       <Stack.Screen
+        name="Mapa"
+        component={Mapa}
       />
 
 

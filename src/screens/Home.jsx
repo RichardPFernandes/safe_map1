@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Text, View } from "react-native";
+import { Text, View, } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
 import firebase from "firebase/compat/app";
 import { firebaseConfig } from "../services/firebaseConfig";
+
 
 
 export function Home() {
@@ -15,14 +16,18 @@ export function Home() {
   const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
   
 
+
+  function Login() {
+    navigation.navigate("Pagina Inicial");
+  }
   function openLogin() {
     firebase.auth()
       .signInWithEmailAndPassword(text, text1)
-      .then(() => navigation.navigate("Pagina Inicial"))
-      .catch(error => console.log(error));
+      .then(() => Login())
+      .catch(error => alert('Email ou Senha não encontrados.'));
   }
   function openCadastro() {
-    navigation.navigate("Pagina Inicial");
+    navigation.navigate("Cadastro");
   }
   return (
     <View>

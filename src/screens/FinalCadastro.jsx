@@ -6,7 +6,7 @@ import { styles } from "../lib/styles";
 export function FinalCadastro() {
     const navigation = useNavigation();
     function open() {
-        navigation.navigate("Cadastro");
+        navigation.navigate("Pagina Inicial");
       }
     return (
         <View style={styles.div1}>

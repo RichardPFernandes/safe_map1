@@ -20,10 +20,13 @@ export function Senha() {
     const handleClick = event => {
         event.preventDefault();
 
-        if (password.trim().length > 5 && text1.trim().length > 5) {
-            open() , signUp()
+        if (password.trim().length < 5) {
+    alert('é necessario que a senha tenha mais que 5 caracteres');
+        } else if (password == text1) {
+            signUp(), open()
         } else {
-            alert('é necessario que a senha tenha mais que 5 caracteres');
+        alert('As senhas são diferentes');
+        
         }
     }
 
@@ -45,9 +48,10 @@ export function Senha() {
             }
         });
     }
+  
     return (
         <View>
-            <Text style={styles.tittle}>Insira a sua Senha {route.params.email}</Text>
+            <Text style={styles.tittle}>Insira a sua Senha</Text>
             <Text style={styles.text}>Sua sennha sera visivel somente para você</Text>
             <View style={{ alignItems: 'center', justifyContent: "center" }}>
                 <View style={styles.left}>
