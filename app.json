@@ -1,9 +1,6 @@
 {
   "expo": {
-    "plugins": [
-      "@react-native-firebase/app",
-      "@react-native-firebase/auth"
-    ],
+    "plugins": ["@react-native-firebase/app", "@react-native-firebase/auth"],
     "name": "richardApp",
     "slug": "richardApp",
     "version": "1.0.0",
@@ -18,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.nomadesprime.richardApp"
@@ -31,6 +26,11 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.nomadesprime.richardApp",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC9XNdRGUCUrVc0nQ3HsK3HSmau7769mtk"
+        }
+      },
       "googleServicesFile": "./google-services.json"
     },
     "web": {

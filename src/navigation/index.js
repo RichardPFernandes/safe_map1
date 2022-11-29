@@ -9,17 +9,25 @@ import { Email } from "../screens/Email";
 import { FinalCadastro } from "../screens/FinalCadastro";
 import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
-import { MapaMulher } from "../screens/MapaMulher";
+import { MapaSeguro } from "../screens/MapaSeguro";
 import { Numero } from "../screens/numero";
 import { Senha } from "../screens/Senha";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import setup from "../services/firebaseConfig";
+import { Splash } from "../screens/Splash";
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 export const RootNavigation = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Splash">
+      <Stack.Screen
+        name="Splash"
+        component={Splash}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen
         name="Home"
         component={Home}
@@ -52,25 +60,25 @@ export const RootApp = () => {
       barStyle={{ backgroundColor: "#F0F8FF" }}
     >
       <Tab.Screen
-        name="Mapa Mulher"
-        component={MapaMulher}
+        name="Mapa Seguro"
+        component={MapaSeguro}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="album" color={color} size={26} />
+            <MaterialCommunityIcons
+              name="map-marker-outline"
+              color={color}
+              size={26}
+            />
           ),
         }}
       />
 
       <Tab.Screen
         name="Sobre"
-        component={MapaMulher}
+        component={MapaSeguro}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="information-outline"
-              color={color}
-              size={26}
-            />
+            <MaterialCommunityIcons name="map" color={color} size={26} />
           ),
         }}
       />
