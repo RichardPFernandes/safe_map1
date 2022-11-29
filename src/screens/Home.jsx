@@ -3,19 +3,45 @@ import { Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
+import firebase from "firebase/compat/app";
+import { firebaseConfig } from "../services/firebaseConfig";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export function Home() {
+  firebase.initializeApp(firebaseConfig);
   const navigation = useNavigation();
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");
   const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
 
-  //fun
+  React.useEffect(() => {
+    checkIfUserIsLoggedIn();
+  }, []);
 
-  function openLogin() {
-    navigation.navigate("Senha");
+  function checkIfUserIsLoggedIn() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log("user is logged in");
+        navigation.navigate("RootApp");
+      }
+    });
   }
 
+  function Login() {
+    const storeData = async (value) => {
+      try {
+        await AsyncStorage.setItem("userLoggedIn", true);
+      } catch (e) {}
+    };
+    navigation.navigate("RootApp");
+  }
+  function openLogin() {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(text, text1)
+      .then(() => Login())
+      .catch((error) => alert("Email ou Senha não encontrados."));
+  }
   function openCadastro() {
     navigation.navigate("Cadastro");
   }
@@ -53,7 +79,7 @@ export function Home() {
           />
         </View>
         <View style={styles.div}>
-          <Button style={styles.botao1} mode="contained" onPress={doLogin}>
+          <Button style={styles.botao1} mode="contained" onPress={openLogin}>
             Enviar
           </Button>
         </View>

@@ -12,6 +12,7 @@ import { Home } from "../screens/Home";
 import { MapaMulher } from "../screens/MapaMulher";
 import { Numero } from "../screens/numero";
 import { Senha } from "../screens/Senha";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import setup from "../services/firebaseConfig";
 
 const Stack = createNativeStackNavigator();
@@ -35,6 +36,11 @@ export const RootNavigation = () => {
       <Stack.Screen name="Cep" component={Cep} />
       <Stack.Screen name="Cpf" component={Cpf} />
       <Stack.Screen name="Concluir Cadastro" component={FinalCadastro} />
+      <Stack.Screen
+        name="RootApp"
+        component={RootApp}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
