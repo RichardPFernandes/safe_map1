@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { Paragraph } from "react-native-paper";
 import firebase from "firebase/compat/app";
 
@@ -27,7 +27,7 @@ export const Splash = ({ navigation }) => {
         justifyContent: "center",
       }}
     >
-      <Paragraph>Safe Map</Paragraph>
+      <Text style={{ textShadowOffset:{width: 2, height: 2} ,textShadowRadius: 10, textShadowColor: '#565656', fontSize: 50, }}>Safe Map</Text>
     </View>
   );
 };
