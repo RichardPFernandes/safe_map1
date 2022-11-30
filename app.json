@@ -1,6 +1,5 @@
 {
   "expo": {
-    "plugins": ["@react-native-firebase/app", "@react-native-firebase/auth"],
     "name": "richardApp",
     "slug": "richardApp",
     "version": "1.0.0",

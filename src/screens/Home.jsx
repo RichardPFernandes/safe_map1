@@ -5,7 +5,6 @@ import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
 import firebase from "firebase/compat/app";
 import { firebaseConfig } from "../services/firebaseConfig";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export function Home() {
   firebase.initializeApp(firebaseConfig);
