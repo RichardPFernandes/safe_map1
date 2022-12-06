@@ -10,11 +10,12 @@ import { FinalCadastro } from "../screens/FinalCadastro";
 import { Genero } from "../screens/Genero";
 import { Home } from "../screens/Home";
 import { MapaSeguro } from "../screens/MapaSeguro";
-import { Numero } from "../screens/numero";
+import { Numero } from "../screens/Numero";
 import { Senha } from "../screens/Senha";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import setup from "../services/firebaseConfig";
 import { Splash } from "../screens/Splash";
+import { LogOut } from "../screens/Logout";
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -37,13 +38,13 @@ export const RootNavigation = () => {
       />
       <Stack.Screen name="Cadastro" component={Cadastro} />
       <Stack.Screen name="Data" component={Data} />
-      {/* <Stack.Screen name="Genero" component={Genero} /> */}
+      <Stack.Screen name="Cep" component={Cep} />
+      <Stack.Screen name="Numero" component={Numero} />
+      <Stack.Screen name="Cpf" component={Cpf} />
       <Stack.Screen name="Email" component={Email} />
       <Stack.Screen name="Senha" component={Senha} />
-      <Stack.Screen name="Cep" component={Cep} />
-      <Stack.Screen name="Cpf" component={Cpf} />
-      <Stack.Screen name="Numero" component={Numero} />
       <Stack.Screen name="Concluir Cadastro" component={FinalCadastro} />
+      {/* <Stack.Screen name="Genero" component={Genero} /> */}
       <Stack.Screen
         name="RootApp"
         component={RootApp}
@@ -76,6 +77,15 @@ export const RootApp = () => {
       <Tab.Screen
         name="Sobre"
         component={MapaSeguro}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="map" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Logout"
+        component={LogOut}
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="map" color={color} size={26} />

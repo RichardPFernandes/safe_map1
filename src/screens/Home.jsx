@@ -12,9 +12,9 @@ export function Home() {
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");
   const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
-  
-  useEffect(() => {
-    checkIfUserIsLoggedIn();
+
+  React.useEffect(() => {
+    // checkIfUserIsLoggedIn();
   }, []);
 
   function checkIfUserIsLoggedIn() {
@@ -22,7 +22,7 @@ export function Home() {
       if (user) {
         console.log("user is logged in");
         navigation.navigate("RootApp");
-      } 
+      }
     });
   }
   function Login() {
@@ -36,7 +36,8 @@ export function Home() {
       .catch((error) => alert("Email ou Senha não encontrados."));
   }
   function openCadastro() {
-    navigation.navigate("Cadastro");
+    navigation.navigate("Numero");
+    // navigation.navigate("Cpf");
   }
   return (
     <View>
