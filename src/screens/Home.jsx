@@ -14,7 +14,7 @@ export function Home() {
   const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
 
   React.useEffect(() => {
-    // checkIfUserIsLoggedIn();
+    checkIfUserIsLoggedIn();
   }, []);
 
   function checkIfUserIsLoggedIn() {
@@ -36,7 +36,7 @@ export function Home() {
       .catch((error) => alert("Email ou Senha não encontrados."));
   }
   function openCadastro() {
-    navigation.navigate("Numero");
+    navigation.navigate("Cadastro");
     // navigation.navigate("Cpf");
   }
   return (
