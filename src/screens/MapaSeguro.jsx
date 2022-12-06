@@ -187,6 +187,8 @@ export const MapaSeguro = () => {
       initialRegion={region} //your region data goes here.
     >
       {/*Make sure the Marker component is a child of MapView. Otherwise it won't render*/}
+      {/* loop trought array markers and display all markers */}
+      
       <Marker
       title={markers[0].title}
       description={markers[0].description}
