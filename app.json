@@ -12,9 +12,12 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/2e649cd5-22cf-4698-b2f8-8bbcdf9233bf"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.nomadesprime.richardApp"
@@ -25,11 +28,6 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "safe.map",
-      "config": {
-        "googleMaps": {
-          "apiKey": "AIzaSyC9XNdRGUCUrVc0nQ3HsK3HSmau7769mtk"
-        }
-      },
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
@@ -44,6 +42,9 @@
       "eas": {
         "projectId": "2e649cd5-22cf-4698-b2f8-8bbcdf9233bf"
       }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
