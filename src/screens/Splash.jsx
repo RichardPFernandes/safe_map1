@@ -5,19 +5,9 @@ import firebase from "firebase/compat/app";
 
 export const Splash = ({ navigation }) => {
   useEffect(() => {
-    checkIfUserIsLoggedIn();
+    navigation.navigate("Home");
   }, []);
 
-  function checkIfUserIsLoggedIn() {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        console.log("user is logged in");
-        navigation.navigate("RootApp");
-      } else {
-        navigation.navigate("Home");
-      }
-    });
-  }
   return (
     <View
       style={{
@@ -27,7 +17,16 @@ export const Splash = ({ navigation }) => {
         justifyContent: "center",
       }}
     >
-      <Text style={{ textShadowOffset:{width: 2, height: 2} ,textShadowRadius: 10, textShadowColor: '#565656', fontSize: 50, }}>Safe Map</Text>
+      <Text
+        style={{
+          textShadowOffset: { width: 2, height: 2 },
+          textShadowRadius: 10,
+          textShadowColor: "#565656",
+          fontSize: 50,
+        }}
+      >
+        Safe Map
+      </Text>
     </View>
   );
 };

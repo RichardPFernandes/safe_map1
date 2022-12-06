@@ -37,12 +37,12 @@ export const RootNavigation = () => {
       />
       <Stack.Screen name="Cadastro" component={Cadastro} />
       <Stack.Screen name="Data" component={Data} />
-      <Stack.Screen name="Genero" component={Genero} />
-      <Stack.Screen name="Numero" component={Numero} />
+      {/* <Stack.Screen name="Genero" component={Genero} /> */}
       <Stack.Screen name="Email" component={Email} />
       <Stack.Screen name="Senha" component={Senha} />
       <Stack.Screen name="Cep" component={Cep} />
       <Stack.Screen name="Cpf" component={Cpf} />
+      <Stack.Screen name="Numero" component={Numero} />
       <Stack.Screen name="Concluir Cadastro" component={FinalCadastro} />
       <Stack.Screen
         name="RootApp"

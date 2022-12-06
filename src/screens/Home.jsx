@@ -12,7 +12,19 @@ export function Home() {
   const [text, setText] = React.useState("");
   const [text1, setText1] = React.useState("");
   const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
+  
+  useEffect(() => {
+    checkIfUserIsLoggedIn();
+  }, []);
 
+  function checkIfUserIsLoggedIn() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log("user is logged in");
+        navigation.navigate("RootApp");
+      } 
+    });
+  }
   function Login() {
     navigation.navigate("RootApp");
   }
