@@ -3,6 +3,7 @@ import { useState } from "react";
 import firebase from "firebase/compat/app";
 import { Button } from "react-native-paper";
 import { View } from "react-native";
+import { styles } from "../lib/styles";
 
 export const LogOut = () => {
   const navigation = useNavigation();
@@ -15,7 +16,7 @@ export const LogOut = () => {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Button mode="contained" onPress={handleLogout}>
+      <Button style={styles.botao} mode="contained" onPress={handleLogout}>
         Sair
       </Button>
     </View>

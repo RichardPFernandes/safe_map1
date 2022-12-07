@@ -88,7 +88,7 @@ export const RootApp = () => {
         component={LogOut}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="map" color={color} size={26} />
+            <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
         }}
       />

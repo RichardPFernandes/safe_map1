@@ -34,7 +34,7 @@ export function Email() {
   }
 
   function open() {
-    navigation.navigate("Senha");
+    navigation.navigate("Senha",{email: email});
   }
   return (
     <View>

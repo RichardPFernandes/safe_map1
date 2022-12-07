@@ -1,14 +1,18 @@
 import * as React from "react";
 import { Text, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../lib/styles";
 import { useState } from 'react';
+import { firebaseConfig } from "../services/firebaseConfig";
+import firebase from "firebase/compat/app";
 
 export function Senha() {
+    firebase.initializeApp(firebaseConfig);
+    const route = useRoute();
     const navigation = useNavigation();
     const [text, setText] = React.useState("");
-    const [text1, setText1] = React.useState("");
+    const [passsword, setPassword] = React.useState("");
     const [isPasswordSecure, setIsPasswordSecure] = React.useState(true);
     const [isPasswordSecure1, setIsPasswordSecure1] = React.useState(true);
 
@@ -16,11 +20,11 @@ export function Senha() {
     const handleClick = event => {
         event.preventDefault();
 
-        if (text.trim().length > 5 && text1.trim().length > 5) {
-            if (text !== text1) {
+        if (text.trim().length > 5 && passsword.trim().length > 5) {
+            if (text !== passsword) {
                 alert('As senhas não são iguais');
             } else {
-                open()
+                signUp()
             }
         } else {
             alert('é necessario que a senha tenha mais que 5 caracteres');
@@ -29,6 +33,18 @@ export function Senha() {
 
     function open() {
         navigation.navigate("Numero");
+    }
+    function signUp() {
+        firebase.auth()
+            .createUserWithEmailAndPassword(route.params.email, passsword)
+            .then (() => {
+                open();
+    })
+    .catch(error => {
+        if (error.code === 'auth/email-already-in-use') {
+            alert('Email já cadastrado');
+        }
+    });
     }
     return (
         <View>
@@ -43,8 +59,8 @@ export function Senha() {
                             right={<TextInput.Icon icon="eye" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />}
                             label="Senha"
                             mode='flat'
-                            value={text}
-                            onChangeText={text => setText(text)}
+                            value={passsword}
+                            onChangeText={passsword => setPassword(passsword)}
                         />
                         <TextInput
                             style={styles.input1}
@@ -52,8 +68,8 @@ export function Senha() {
                             right={<TextInput.Icon icon="eye" onPress={() => { isPasswordSecure1 ? setIsPasswordSecure1(false) : setIsPasswordSecure1(true) }} />}
                             label="Confirme sua Senha"
                             mode='flat'
-                            value={text1}
-                            onChangeText={text1 => setText1(text1)}
+                            value={text}
+                            onChangeText={text => setText(text)}
                         />
                     </View>
                 </View>

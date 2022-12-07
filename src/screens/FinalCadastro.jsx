@@ -12,12 +12,12 @@ export function FinalCadastro() {
     return (
         <View style={styles.div1}>
             <Text style={styles.tittle}>Cadastro Concluido</Text>
-            <Text style={styles.text}>Redirecionando você ao mapa</Text>
-            <Text style={styles.text}>Aguarde um momento</Text>
-            <Text style={styles.text}> caso não seja redirecinado, aperte o botão:</Text>
-            <Button style={styles.button} mode="contained" onPress={open}>
+            <Text style={styles.text}>Clique no botão abaixo para acessar o mapa</Text>
+            <View style={styles.div1}>
+            <Button style={styles.botao} mode="contained" onPress={open}>
                 Ir para o mapa
             </Button>
+            </View>
             <View style={styles.div1}>
             </View>
         </View>

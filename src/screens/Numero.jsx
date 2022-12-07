@@ -37,11 +37,12 @@ export function Numero() {
       .signInWithCredential(credential)
       .then(() => {
         setCode("");
+        open();
       })
       .catch((error) => {
         //alert(error);
       });
-    open();
+ 
   };
 
   function open() {
