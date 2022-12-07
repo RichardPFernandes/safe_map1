@@ -14,7 +14,7 @@ export const LogOut = () => {
   };
 
   return (
-    <View style={{ flex: 1, alignContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Button mode="contained" onPress={handleLogout}>
         Sair
       </Button>

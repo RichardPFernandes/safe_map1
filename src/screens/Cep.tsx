@@ -42,6 +42,17 @@ export function Cep() {
     })).catch(err => console.log('erro: ', err))
   }, [adress.cep])
 
+  function handleClick() {
+    if(adress.logradouro === undefined || adress.bairro === undefined || adress.localidade === undefined || adress.uf === undefined || Number === "") {
+      console.log('CEP inválido');
+    }
+    else {
+      navigation.navigate('Cpf');
+    }
+
+  }
+
+
   return (
     <View style={styles.div}>
       <View style={styles.div}>
@@ -99,7 +110,7 @@ export function Cep() {
           }))}
         />
         <View style={styles.div1}>
-             <Button style={styles.botao} mode="contained" onPress={open}>
+             <Button style={styles.botao} mode="contained" onPress={handleClick}>
           Enviar
         </Button>
         </View>

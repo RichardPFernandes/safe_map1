@@ -45,7 +45,7 @@ export function Numero() {
   };
 
   function open() {
-    navigation.navigate("Cpf");
+    navigation.navigate("Concluir Cadastro");
   }
   return (
     <View style={styles.div1}>
